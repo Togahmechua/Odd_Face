@@ -1,76 +1,79 @@
 ﻿using Coffee.UIExtensions;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class PointOnCanvas : MonoBehaviour
+public class PointOnCanvas : MonoBehaviour, ICanvasClickHandler
 {
-    private RectTransform canvasRect;
-
     [SerializeField] private Transform childHolder;
-    [SerializeField] private List<UIParticle> uiParList = new List<UIParticle>();
 
-    void Start()
+    [SerializeField] private Button myButton;
+
+    private List<UIParticle> particlesList = new List<UIParticle>();
+
+    void Awake()
     {
-        // Lấy RectTransform của Canvas
-        canvasRect = GetComponent<RectTransform>();
-
-        // Load list particle từ childHolder
-        RefreshParticleList();
+        RefreshList();
     }
 
-    void Update()
+    void OnEnable()
     {
-        if (Input.GetMouseButtonDown(0)) // Click hoặc Tap
-        {
-            Vector2 localPoint;
-            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                canvasRect,
-                Input.mousePosition,
-                null, // vì Screen Space - Overlay
-                out localPoint))
-            {
-                // Random 1 particle
-                GameObject go = Particle();
-                if (go != null)
-                {
-                    go.SetActive(true); // bật particle nếu đang tắt
-                    go.transform.localPosition = localPoint;
+        if (CanvasClickDetector.Ins != null)
+            CanvasClickDetector.Ins.Register(this);
+    }
 
-                    Debug.Log($"[Click] LocalPos = {localPoint}, ScreenPos = {Input.mousePosition}, Spawned: {go.name}");
-                }
-                else
-                {
-                    Debug.LogWarning("Không có UIParticle nào trong list!");
-                }
-            }
+    void OnDisable()
+    {
+        if (CanvasClickDetector.Ins != null)
+            CanvasClickDetector.Ins.Unregister(this);
+
+        if (particlesList.Count <= 0)
+            return;
+
+        foreach (var particle in particlesList)
+        {
+            particle.gameObject.SetActive(false);
         }
     }
 
-    private GameObject Particle()
+    public void OnCanvasClick(Vector2 localPos, Vector2 screenPos)
     {
-        if (uiParList.Count <= 0) return null;
-        int rand = Random.Range(0, uiParList.Count);
-        return uiParList[rand].gameObject;
+        if (!this.gameObject.activeSelf)
+            return;
+
+        if (myButton != null)
+        {
+            RectTransform btnRect = myButton.GetComponent<RectTransform>();
+
+            if (RectTransformUtility.RectangleContainsScreenPoint(btnRect, screenPos, null))
+            {
+                Debug.Log("Click vào chính cái Button -> bỏ qua effect");
+                return; // không spawn
+            }
+        }
+
+        // Nếu không click vào button thì spawn particle
+        if (particlesList.Count > 0)
+        {
+            int rand = Random.Range(0, particlesList.Count);
+            var go = particlesList[rand].gameObject;
+
+            go.SetActive(false);
+            go.SetActive(true);
+            go.transform.localPosition = localPos;
+
+            Debug.Log($"[ParticleSpawner] Spawn {go.name} at {localPos}");
+        }
     }
 
-    private void RefreshParticleList()
+    private void RefreshList()
     {
-        uiParList.Clear();
-        if (childHolder == null) return;
-
+        particlesList.Clear();
         for (int i = 0; i < childHolder.childCount; i++)
         {
             UIParticle ui = childHolder.GetChild(i).GetComponent<UIParticle>();
-            if (ui != null)
-            {
-                uiParList.Add(ui);
-            }
+            if (ui != null) particlesList.Add(ui);
         }
-    }
-
-    private void OnValidate()
-    {
-        // Auto refresh list khi chỉnh trong inspector
-        RefreshParticleList();
     }
 }

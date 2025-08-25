@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151030b944d64a541b09de007373591a, type: 3}
+  m_Name: LegSO
+  m_EditorClassIdentifier: 
+  pairs:
+  - id: 0
+    orderInLayer: 0
+    left:
+      displayName: Left_Leg
+      sprite: {fileID: 21300000, guid: f3d1177dc8819f0409236e7c465faa42, type: 3}
+    right:
+      displayName: Right_Leg
+      sprite: {fileID: 21300000, guid: 6c58c8f44a925ae48b1f9a01919e62a7, type: 3}
+  - id: 1
+    orderInLayer: -2
+    left:
+      displayName: Left_Leg
+      sprite: {fileID: 21300000, guid: 49a15731e09cf524d9240522896a19e3, type: 3}
+    right:
+      displayName: Right_Leg
+      sprite: {fileID: 21300000, guid: 6d77669b771631144b5eb7f0fa44b8c8, type: 3}
+  - id: 2
+    orderInLayer: -2
+    left:
+      displayName: Left_Leg
+      sprite: {fileID: 21300000, guid: 2bd992c32a22e524599030ab9e876a96, type: 3}
+    right:
+      displayName: Right_Leg
+      sprite: {fileID: 21300000, guid: 8af31bb7bc2c1b04585ae006c227a83e, type: 3}

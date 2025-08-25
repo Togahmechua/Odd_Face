@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709ee76f49f65d34c8ccdc7efdc87f26, type: 3}
+  m_Name: HandSO
+  m_EditorClassIdentifier: 
+  pairs:
+  - id: 0
+    orderInLayer: -2
+    left:
+      displayName: Left_Hand
+      sprite: {fileID: 21300000, guid: 5f1d2a0f4596bf34f847e7a89ba714a9, type: 3}
+    right:
+      displayName: Right_Hand
+      sprite: {fileID: 21300000, guid: 8b3eac7e911cba74c93d2ebb404aca3c, type: 3}
+  - id: 1
+    orderInLayer: -2
+    left:
+      displayName: Left_Hand
+      sprite: {fileID: 21300000, guid: f4bec4d968bc28246885bb75743366e4, type: 3}
+    right:
+      displayName: Right_Hand
+      sprite: {fileID: 21300000, guid: eae0114c699c4484a89be682eb292cb3, type: 3}
+  - id: 2
+    orderInLayer: -2
+    left:
+      displayName: Left_Hand
+      sprite: {fileID: 21300000, guid: 9fc151e0d16ff134d8ef31db4a5781d1, type: 3}
+    right:
+      displayName: Right_Hand
+      sprite: {fileID: 21300000, guid: 2511f69ae1968404c979cffb4c7b8a26, type: 3}

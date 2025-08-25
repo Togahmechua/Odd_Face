@@ -138,14 +138,22 @@ public class ParticleAmount
 
 public enum ParticleType
 {
-    None,
-    ConfettiEff,
-    SmokeEff
+    None
 }
 
 public enum PoolType
 {
-    None
+    None,
+    FaceGroup,
+    EyesGroup,
+    NoseGroup,
+    HairGroup,
+    BodyGroup,
+    HandGroup,
+    EyeBrownGroup,
+    MouthGroup,
+    LegGroup,
+    Other
 }
 
 

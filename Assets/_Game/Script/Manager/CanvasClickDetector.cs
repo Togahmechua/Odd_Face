@@ -4,30 +4,23 @@ using UnityEngine;
 
 public class CanvasClickDetector : Singleton<CanvasClickDetector>
 {
-    private RectTransform canvasRect;
+    [SerializeField] private RectTransform canvasRect;
     private readonly List<ICanvasClickHandler> handlers = new List<ICanvasClickHandler>();
 
-    private void Awake()
+    void Update()
     {
-        canvasRect = GetComponent<RectTransform>();
-    }
+        if (handlers.Count == 0)
+            return;
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0)) // click chuột hoặc tap
+        if (Input.GetMouseButtonDown(0))
         {
-            Vector2 localPoint;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                canvasRect,
-                Input.mousePosition,
-                null,
-                out localPoint
-            );
-
-            // Gửi event tới tất cả handler
-            foreach (var handler in handlers)
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                canvasRect, Input.mousePosition, null, out Vector2 localPos))
             {
-                handler.OnCanvasClick(localPoint, Input.mousePosition);
+                foreach (var handler in handlers)
+                {
+                    handler.OnCanvasClick(localPos, Input.mousePosition);
+                }
             }
         }
     }

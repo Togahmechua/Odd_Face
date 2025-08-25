@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3c1d5150548e04ea7e68cb5dfff1e2, type: 3}
+  m_Name: EyeSO
+  m_EditorClassIdentifier: 
+  pairs:
+  - id: 0
+    orderInLayer: 1
+    left:
+      displayName: Left_Eye
+      sprite: {fileID: 21300000, guid: 3ed6090df4a373b47a87acd453787889, type: 3}
+    right:
+      displayName: Right_Eye
+      sprite: {fileID: 21300000, guid: a7e5efb306320e14a8b4c365749b491a, type: 3}
+  - id: 1
+    orderInLayer: 1
+    left:
+      displayName: Left_Eye
+      sprite: {fileID: 21300000, guid: 33abba8fd7893ab49aaaa0ccfa16394a, type: 3}
+    right:
+      displayName: Right_Eye
+      sprite: {fileID: 21300000, guid: 7b385f5bf80bd944183c5612f77d5baf, type: 3}
+  - id: 2
+    orderInLayer: 1
+    left:
+      displayName: Left_Eye
+      sprite: {fileID: 21300000, guid: 3879eaacf1359e8479ccafcdb8451436, type: 3}
+    right:
+      displayName: Right_Eye
+      sprite: {fileID: 21300000, guid: 5c3eb3795ea47ca40b7784b91310d1ee, type: 3}
+  - id: 3
+    orderInLayer: 1
+    left:
+      displayName: Left_Eye
+      sprite: {fileID: 21300000, guid: ebb395ee3fe675a4d991d974027249ec, type: 3}
+    right:
+      displayName: Right_Eye
+      sprite: {fileID: 21300000, guid: f00c5f8c199ed7b4288f20523d72692d, type: 3}
+  - id: 4
+    orderInLayer: 1
+    left:
+      displayName: Left_Eye
+      sprite: {fileID: 21300000, guid: af505102914669f46bbb1dd1e15621fc, type: 3}
+    right:
+      displayName: Right_Eye
+      sprite: {fileID: 21300000, guid: b753d65da65574042abb57b91b05f176, type: 3}
