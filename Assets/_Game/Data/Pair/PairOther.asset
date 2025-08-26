@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairs:
   - id: 0
-    orderInLayer: 3
+    orderInLayer: 4
     left:
       displayName: Left_Cheek
       sprite: {fileID: 21300000, guid: 3634be7fd413f9b4e9918b63d22d9f29, type: 3}

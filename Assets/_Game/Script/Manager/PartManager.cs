@@ -68,6 +68,13 @@ public class PartManager : Singleton<PartManager>
         sr.sprite = config.sprite;
         sr.sortingOrder = config.orderInLayer;
 
+        var col = go.AddComponent<BoxCollider2D>();
+        col.isTrigger = true;
+
+        PartObject poNew = go.AddComponent<PartObject>();
+
+        LevelManager.Ins.curLevel.AddToList(poNew);
+
         go.SetActive(false); // theo yêu cầu ban đầu
     }
 
@@ -84,6 +91,13 @@ public class PartManager : Singleton<PartManager>
             sr.sprite = config.left.sprite;
             sr.sortingOrder = config.orderInLayer;
 
+            var col = left.AddComponent<BoxCollider2D>();
+            col.isTrigger = true;
+
+            PartObject poNewL = left.AddComponent<PartObject>();
+
+            LevelManager.Ins.curLevel.AddToList(poNewL);
+
             left.SetActive(false);
         }
 
@@ -96,8 +110,18 @@ public class PartManager : Singleton<PartManager>
             sr.sprite = config.right.sprite;
             sr.sortingOrder = config.orderInLayer;
 
+            var col = right.AddComponent<BoxCollider2D>();
+            col.isTrigger = true;
+
+            right.AddComponent<PartObject>();
+
+            PartObject poNewR = right.AddComponent<PartObject>();
+
+            LevelManager.Ins.curLevel.AddToList(poNewR);
+
             right.SetActive(false);
         }
     }
+
     #endregion
 }
