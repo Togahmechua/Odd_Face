@@ -7,8 +7,8 @@ When all parts are placed, the **full face is revealed**, and you can capture & 
 ---
 
 ## 📱 App Icon
-<p align="left">
-  <img width="140" height="140" alt="app icon" src="https://github.com/user-attachments/assets/5253c13c-ad96-47d1-abe1-19b85ed7ea45" />
+<p align="center">
+  <img width="200" height="200" alt="app icon" src="https://github.com/user-attachments/assets/5253c13c-ad96-47d1-abe1-19b85ed7ea45" />
 </p>
 
 ---
@@ -24,14 +24,6 @@ When all parts are placed, the **full face is revealed**, and you can capture & 
 
 ---
 
-## ⚙️ Tech Stack
-- **Unity 2020.3 LTS** – stable and lightweight for 2D casual games  
-- **C#** – handles game logic, drag & drop interactions, and face assembly  
-- **Custom Screenshot Capture** – allows saving and sharing player creations  
-- **Mobile & Emulator Friendly** – tested on both devices and emulators  
-
----
-
 ## 🚀 Features
 - 🎨 **Drag & Drop Gameplay** – pick, place, and hide parts as you build the face  
 - 🧠 **Memory Challenge** – parts vanish after placing, only revealed at the end  
@@ -39,15 +31,6 @@ When all parts are placed, the **full face is revealed**, and you can capture & 
 - 💡 **Minimal & Fun** – designed for short, joyful play sessions  
 - 📂 **Save & Share** – automatically saves to gallery, making it easy to share with friends  
 - 🎭 **Replayability** – every attempt creates a new funny face combination  
-
----
-
-## 📂 Save & Share
-The game comes with a built-in **screenshot capture system**:
-- When the player completes a face, they can **take a snapshot** of their creation.  
-- The screenshot is saved directly to the **device’s gallery/storage**.  
-- Players can **share their results** on social media or messaging apps with ease.  
-- Works on both **real devices** and **emulators** (for testing).  
 
 ---
 
@@ -61,3 +44,26 @@ The game comes with a built-in **screenshot capture system**:
 
 ---
 
+## 📂 Save & Share
+The game comes with a built-in **screenshot capture system**:
+- When the player completes a face, they can **take a snapshot** of their creation.  
+- The screenshot is saved directly to the **device’s gallery/storage**.  
+- Players can **share their results** on social media or messaging apps with ease.  
+- Works on both **real devices** and **emulators** (for testing).  
+
+---
+
+## ⚙️ Tech Stack
+- **Unity 2022.3.24 LTS** – stable and lightweight for 2D casual games  
+- **C#** – handles game logic, drag & drop interactions, and face assembly  
+- **Custom Screenshot Capture** – allows saving and sharing player creations  
+- **Mobile & Emulator Friendly** – tested on both devices and emulators  
+
+---
+
+## 🛠️ Architecture & Code Practices
+- **ScriptableObjects** – used to store part data (face elements, configs) in a clean and reusable way  
+- **SOLID Principles** – code is structured into small, maintainable classes that follow single-responsibility and interface segregation  
+- **Interfaces** – ensure flexibility and scalability when adding new part types or gameplay mechanics  
+- **Object Pooling** – optimizes performance by reusing face part objects instead of creating/destroying repeatedly  
+- **Event-driven Design** – UI updates and gameplay logic are loosely coupled, improving testability and maintainability  
