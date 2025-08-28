@@ -12,11 +12,6 @@ public class PicCanvas : UICanvas
     [Header("Reference")]
     [SerializeField] private PhotoCapture photoCapture;
 
-    private void OnEnable()
-    {
-        AudioManager.Ins.PlaySFX(AudioManager.Ins.win);
-    }
-
     private void Start()
     {
         homeBtn.onClick.AddListener(() =>

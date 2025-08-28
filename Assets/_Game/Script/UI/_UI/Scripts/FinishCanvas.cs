@@ -8,13 +8,18 @@ public class FinishCanvas : UICanvas
     [SerializeField] private Button retryBtn;
     [SerializeField] private Button takePicBtn;
 
+    private void OnEnable()
+    {
+        AudioManager.Ins.PlaySFX(AudioManager.Ins.win);
+    }
+
     private void Start()
     {
         retryBtn.onClick.AddListener(() =>
         {
             AudioManager.Ins.PlaySFX(AudioManager.Ins.click);
 
-            UIManager.Ins.TransitionUI<ChangeUICanvas, PauseCanvas>(0.6f,
+            UIManager.Ins.TransitionUI<ChangeUICanvas, FinishCanvas>(0.6f,
                  () =>
                  {
                      LevelManager.Ins.DespawnLevel();
