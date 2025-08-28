@@ -12,6 +12,8 @@ public class FinishCanvas : UICanvas
     {
         retryBtn.onClick.AddListener(() =>
         {
+            AudioManager.Ins.PlaySFX(AudioManager.Ins.click);
+
             UIManager.Ins.TransitionUI<ChangeUICanvas, PauseCanvas>(0.6f,
                  () =>
                  {
@@ -23,6 +25,8 @@ public class FinishCanvas : UICanvas
 
         takePicBtn.onClick.AddListener(() =>
         {
+            AudioManager.Ins.PlaySFX(AudioManager.Ins.click);
+
             UIManager.Ins.CloseUI<FinishCanvas>();
             UIManager.Ins.OpenUI<PicCanvas>();
         });

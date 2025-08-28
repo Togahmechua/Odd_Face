@@ -39,8 +39,10 @@ public class PartObject : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
         dragging = false;
 
         this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        //ParticlePool.Play(ParticleType.Magic, transform.position, Quaternion.identity);
 
         // gọi callback để level biết phần này vừa thả xong
         onReleased?.Invoke(this);
+
     }
 }

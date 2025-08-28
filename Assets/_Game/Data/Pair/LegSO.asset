@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairs:
   - id: 0
-    orderInLayer: 0
+    orderInLayer: -2
     left:
       displayName: Left_Leg
       sprite: {fileID: 21300000, guid: f3d1177dc8819f0409236e7c465faa42, type: 3}

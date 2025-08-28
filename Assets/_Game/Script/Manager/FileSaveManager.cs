@@ -10,37 +10,34 @@ public class FileSaveManager : Singleton<FileSaveManager>
     /// <summary>
     /// Save texture to device storage (PC = Save As, Mobile = Gallery)
     /// </summary>
-    public void SaveTexture(Texture2D tex, string defaultFileName = "screenshot.png", string albumName = "MyGame")
+    public void SaveTexture(Texture2D texture, string filename, string albumName = "MyApp")
     {
-#if UNITY_ANDROID || UNITY_IOS
-        // --- Save trực tiếp vào Gallery ---
-        NativeGallery.SaveImageToGallery(tex, albumName, defaultFileName, (success, path) =>
-        {
-            if (!success)
-                Debug.LogError("❌ Failed to save image to gallery!");
-            else
-                Debug.Log("✅ Saved to gallery: " + path);
-        });
-#elif UNITY_STANDALONE || UNITY_EDITOR
-        // --- Hiển thị Save As dialog trên PC ---
-        var extensionList = new[] { new ExtensionFilter("PNG Image", "png") };
-        string path = StandaloneFileBrowser.SaveFilePanel("Save Screenshot", "", defaultFileName, extensionList);
+        byte[] bytes = texture.EncodeToPNG();
 
+#if UNITY_ANDROID && !UNITY_EDITOR
+        NativeGallery.SaveImageToGallery(bytes, albumName, filename);
+        Debug.Log("✅ Saved to gallery (Android)");
+
+#elif UNITY_IOS && !UNITY_EDITOR
+        NativeGallery.SaveImageToGallery(bytes, albumName, filename);
+        Debug.Log("✅ Saved to gallery (iOS)");
+
+#elif UNITY_STANDALONE || UNITY_EDITOR
+        string path = StandaloneFileBrowser.SaveFilePanel("Save Image", "", filename, "png");
         if (!string.IsNullOrEmpty(path))
         {
-            byte[] pngData = tex.EncodeToPNG();
-            File.WriteAllBytes(path, pngData);
-            Debug.Log("✅ Saved to: " + path);
+            File.WriteAllBytes(path, bytes);
+            Debug.Log("💾 Saved to PC: " + path);
         }
         else
         {
-            Debug.Log("⚠ Save canceled.");
+            Debug.LogWarning("❌ Save cancelled.");
         }
 #endif
     }
 
     /// <summary>
-    /// Convert UI Image to Texture2D nếu cần
+    /// Capture screen as Texture2D
     /// </summary>
     public Texture2D CaptureScreenToTexture()
     {
@@ -49,7 +46,4 @@ public class FileSaveManager : Singleton<FileSaveManager>
         tex.Apply();
         return tex;
     }
-
-
-    // Cách save FileSaveManager.Instance.SaveTexture(screenCapture, "photo.png", "MyAlbum"); (Mobile)
 }

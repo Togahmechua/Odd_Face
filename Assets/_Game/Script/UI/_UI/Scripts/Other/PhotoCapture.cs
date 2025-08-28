@@ -66,6 +66,8 @@ public class PhotoCapture : MonoBehaviour
 
     private IEnumerator CapturePhoto()
     {
+        AudioManager.Ins.PlaySFX(AudioManager.Ins.takePic);
+
         cameraUI.SetActive(false);
         viewingPhoto = true;
 
@@ -129,5 +131,10 @@ public class PhotoCapture : MonoBehaviour
         // đảm bảo tắt hẳn
         c.a = 0f;
         flashImage.color = c;
+    }
+
+    public Texture2D GetCapturedPhoto()
+    {
+        return screenCapture;
     }
 }

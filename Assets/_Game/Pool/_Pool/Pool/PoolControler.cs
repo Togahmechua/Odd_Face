@@ -138,22 +138,13 @@ public class ParticleAmount
 
 public enum ParticleType
 {
-    None
+    None,
+    Magic
 }
 
 public enum PoolType
 {
-    None,
-    FaceGroup,
-    EyesGroup,
-    NoseGroup,
-    HairGroup,
-    BodyGroup,
-    HandGroup,
-    EyeBrownGroup,
-    MouthGroup,
-    LegGroup,
-    Other
+    None
 }
 
 

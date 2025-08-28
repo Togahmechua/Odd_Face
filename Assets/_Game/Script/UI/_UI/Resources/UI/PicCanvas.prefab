@@ -369,6 +369,7 @@ MonoBehaviour:
   IsDestroyOnClose: 0
   homeBtn: {fileID: 1855937844068246399}
   saveBtn: {fileID: 5779871244960864607}
+  photoCapture: {fileID: 6121891849155370936}
 --- !u!1 &1715943304547396332
 GameObject:
   m_ObjectHideFlags: 0
