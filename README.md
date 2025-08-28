@@ -67,3 +67,8 @@ The game comes with a built-in **screenshot capture system**:
 - **Interfaces** – ensure flexibility and scalability when adding new part types or gameplay mechanics  
 - **Object Pooling** – optimizes performance by reusing face part objects instead of creating/destroying repeatedly  
 - **Event-driven Design** – UI updates and gameplay logic are loosely coupled, improving testability and maintainability  
+
+---
+
+## 🌐 Play Now
+👉 Try it here: [Odd Face on itch.io](https://togahmechua.itch.io/odd-face)  
