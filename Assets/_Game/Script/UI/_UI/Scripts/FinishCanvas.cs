@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FinishCanvas : MonoBehaviour
+public class FinishCanvas : UICanvas
 {
     [SerializeField] private Button retryBtn;
     [SerializeField] private Button takePicBtn;
@@ -19,6 +19,12 @@ public class FinishCanvas : MonoBehaviour
                      UIManager.Ins.OpenUI<MainCanvas>();
                      LevelManager.Ins.SpawnLevel();
                  });
+        });
+
+        takePicBtn.onClick.AddListener(() =>
+        {
+            UIManager.Ins.CloseUI<FinishCanvas>();
+            UIManager.Ins.OpenUI<PicCanvas>();
         });
     }
 }

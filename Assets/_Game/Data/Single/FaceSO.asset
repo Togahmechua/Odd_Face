@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parts:
   - id: 0
+    orderInLayer: 0
     name: Face
     sprite: {fileID: 21300000, guid: 636efb9aabdde2b47a96331ec1f14280, type: 3}
   - id: 1
+    orderInLayer: 0
     name: Face
-    sprite: {fileID: 21300000, guid: da7b37aa428d04c4fa510bf8c1786c01, type: 3}
+    sprite: {fileID: 21300000, guid: 2ffb6be7cd21b2f49b88a6747ec37353, type: 3}
   - id: 2
+    orderInLayer: 0
     name: Face
-    sprite: {fileID: 21300000, guid: 44de8bba39d649f4cbb9ee82b5f8e30c, type: 3}
+    sprite: {fileID: 21300000, guid: e9eaf36ede8eb084d91f63e5d5837657, type: 3}

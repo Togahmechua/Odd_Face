@@ -25,15 +25,23 @@ MonoBehaviour:
     orderInLayer: -2
     left:
       displayName: Left_Leg
-      sprite: {fileID: 21300000, guid: 49a15731e09cf524d9240522896a19e3, type: 3}
+      sprite: {fileID: 21300000, guid: 2c30c00f401b2ee46a370b74ea45e667, type: 3}
     right:
       displayName: Right_Leg
-      sprite: {fileID: 21300000, guid: 6d77669b771631144b5eb7f0fa44b8c8, type: 3}
+      sprite: {fileID: 21300000, guid: 2c30c00f401b2ee46a370b74ea45e667, type: 3}
   - id: 2
     orderInLayer: -2
     left:
       displayName: Left_Leg
-      sprite: {fileID: 21300000, guid: 2bd992c32a22e524599030ab9e876a96, type: 3}
+      sprite: {fileID: 21300000, guid: 59072d9a29d5b454792578b7319e6806, type: 3}
     right:
       displayName: Right_Leg
-      sprite: {fileID: 21300000, guid: 8af31bb7bc2c1b04585ae006c227a83e, type: 3}
+      sprite: {fileID: 21300000, guid: 59072d9a29d5b454792578b7319e6806, type: 3}
+  - id: 3
+    orderInLayer: -2
+    left:
+      displayName: Left_Leg
+      sprite: {fileID: 21300000, guid: 8c28c645598acdc4db792a64d6a02749, type: 3}
+    right:
+      displayName: Right_Leg
+      sprite: {fileID: 21300000, guid: 8c28c645598acdc4db792a64d6a02749, type: 3}

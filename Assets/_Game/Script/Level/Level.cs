@@ -35,6 +35,9 @@ public class Level : MonoBehaviour
             {
                 po.gameObject.SetActive(true);
             }
+
+            UIManager.Ins.CloseUI<MainCanvas>();
+            UIManager.Ins.OpenUI<FinishCanvas>();
             return;
         }
 
