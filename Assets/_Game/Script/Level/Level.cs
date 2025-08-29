@@ -13,7 +13,15 @@ public class Level : MonoBehaviour
         cv.renderMode = RenderMode.ScreenSpaceCamera;
         cv.worldCamera = Camera.main;
 
-        PartManager.Ins.RandomPart(transform);
+        int rand = Random.Range(0, 2);
+        if (rand == 0)
+        {
+            PartManager.Ins.RandomPart(transform);
+        }
+        else
+        {
+            PartManager.Ins.RandomByPack(transform);
+        }
 
         // giả sử PartManager đã add các PartObject vào poList
         ActiveNextPart();

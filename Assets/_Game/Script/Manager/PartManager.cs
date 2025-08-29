@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor.Sprites;
+using UnityEngine;
 
 public class PartManager : Singleton<PartManager>
 {
@@ -16,6 +17,9 @@ public class PartManager : Singleton<PartManager>
     [SerializeField] private HandSO handSO;
     [SerializeField] private LegSO legSO;
     [SerializeField] private OtherPairSO otherPairSO;
+
+    [Header("Pack")]
+    [SerializeField] private PackSO packSO;
 
     #region GET
     // Single
@@ -53,6 +57,27 @@ public class PartManager : Singleton<PartManager>
         int randOther = Random.Range(0, 3); // 0 = none, 1 = single, 2 = pair
         if (randOther == 1) SpawnSingle(GetRandomOther(), trans);
         else if (randOther == 2) SpawnPair(GetRandomOtherPair(), trans);
+    }
+
+    public void RandomByPack(Transform trans)
+    {
+        PackConfig pack = packSO.GetRandomPack();
+        if (pack == null) return;
+
+        SpawnSingle(pack.body, trans);
+        SpawnSingle(pack.face, trans);
+        SpawnSingle(pack.hair, trans);
+        SpawnSingle(pack.mouth, trans);
+        SpawnSingle(pack.nose, trans);
+
+        SpawnPair(pack.eyes, trans);
+        SpawnPair(pack.eyeBrows, trans);
+        SpawnPair(pack.hands, trans);
+        SpawnPair(pack.legs, trans);
+
+        int randOther = Random.Range(0, 3); // 0 = none, 1 = single, 2 = pair
+        if (randOther == 1) SpawnSingle(pack.other, trans);
+        else if (randOther == 2) SpawnPair(pack.otherPair, trans);
     }
     #endregion
 

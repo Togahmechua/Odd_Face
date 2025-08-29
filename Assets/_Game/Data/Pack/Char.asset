@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2acc314ed632e54d8f68196fcb09204, type: 3}
+  m_Name: Char
+  m_EditorClassIdentifier: 
+  packs:
+  - body:
+      id: 0
+      orderInLayer: -1
+      name: Body
+      sprite: {fileID: 21300000, guid: f8cb5eec2d706cd45a9d070ecfdcf20b, type: 3}
+    face:
+      id: 0
+      orderInLayer: 0
+      name: Face
+      sprite: {fileID: 21300000, guid: debd2117619f3ec479bdecbc824ea12e, type: 3}
+    hair:
+      id: 0
+      orderInLayer: 2
+      name: Hair
+      sprite: {fileID: 21300000, guid: 9d9656d5362534cdb88097236d8875d8, type: 3}
+    mouth:
+      id: 0
+      orderInLayer: 3
+      name: Mouth
+      sprite: {fileID: 21300000, guid: 61b045ff697f72147823aafbf255ed62, type: 3}
+    nose:
+      id: 0
+      orderInLayer: 1
+      name: Nose
+      sprite: {fileID: 21300000, guid: 4aa72c71613d5fa4c87010668ec21142, type: 3}
+    other:
+      id: 0
+      orderInLayer: 4
+      name: Anger Mark
+      sprite: {fileID: 21300000, guid: e719a6d78a5439140877f5149f49fc4a, type: 3}
+    eyes:
+      id: 0
+      orderInLayer: 1
+      left:
+        displayName: Left_Eye
+        sprite: {fileID: 21300000, guid: af505102914669f46bbb1dd1e15621fc, type: 3}
+      right:
+        displayName: Right_Eye
+        sprite: {fileID: 21300000, guid: b753d65da65574042abb57b91b05f176, type: 3}
+    eyeBrows:
+      id: 0
+      orderInLayer: 2
+      left:
+        displayName: Left_Eyebrow
+        sprite: {fileID: 21300000, guid: bf4262ad42a6b7d42992b887ab517969, type: 3}
+      right:
+        displayName: Right_Eyebrow
+        sprite: {fileID: 21300000, guid: 2923fc59d59cfa64eaa488d78f3739a0, type: 3}
+    hands:
+      id: 0
+      orderInLayer: -2
+      left:
+        displayName: Left_Hand
+        sprite: {fileID: 21300000, guid: a0889f26c7b6d4aca9124796b985bf93, type: 3}
+      right:
+        displayName: Right_Hand
+        sprite: {fileID: 21300000, guid: bf9400970ac314033b4e171d3b336fa5, type: 3}
+    legs:
+      id: 0
+      orderInLayer: -2
+      left:
+        displayName: Left_Leg
+        sprite: {fileID: 21300000, guid: 01e3d2a1b66314d1fa129514a40f6e66, type: 3}
+      right:
+        displayName: Right_Leg
+        sprite: {fileID: 21300000, guid: 88eec6c522b5e4bee860a5e0e9659eb3, type: 3}
+    otherPair:
+      id: 0
+      orderInLayer: 4
+      left:
+        displayName: Left_Cheek
+        sprite: {fileID: 21300000, guid: 3634be7fd413f9b4e9918b63d22d9f29, type: 3}
+      right:
+        displayName: Right_Cheek
+        sprite: {fileID: 21300000, guid: c3e79361e3de33d4d97ff442cf94d666, type: 3}
