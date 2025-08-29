@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,15 +29,26 @@ public class PicCanvas : UICanvas
         saveBtn.onClick.AddListener(() =>
         {
             AudioManager.Ins.PlaySFX(AudioManager.Ins.click);
-            //Save pic into ur device
 
             Texture2D photo = photoCapture.GetCapturedPhoto();
             if (photo != null)
             {
 #if UNITY_ANDROID || UNITY_IOS
-                FileSaveManager.Ins.SaveTexture(photo, "Odd Face", "MyAlbum");
+                FileSaveManager.Ins.SaveTexture(photo, "photo.png", "MyAlbum", (success, path) =>
+                {
+                    if (success)
+                        Debug.Log("✅ Photo saved successfully: " + path);
+                    else
+                        Debug.LogWarning("❌ Failed to save photo!");
+                });
 #elif UNITY_STANDALONE || UNITY_EDITOR
-                FileSaveManager.Ins.SaveTexture(photo, "photo.png");
+        FileSaveManager.Ins.SaveTexture(photo, "photo.png", "MyAlbum", (success, path) =>
+        {
+            if (success)
+                Debug.Log("💾 Photo saved to PC: " + path);
+            else
+                Debug.LogWarning("❌ Save cancelled!");
+        });
 #endif
             }
             else

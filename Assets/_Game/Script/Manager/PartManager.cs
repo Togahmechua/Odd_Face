@@ -71,6 +71,12 @@ public class PartManager : Singleton<PartManager>
         var col = go.AddComponent<BoxCollider2D>();
         col.isTrigger = true;
 
+        // Set box size
+        Vector2 currentSize = col.size;
+        float newX = currentSize.x < 1.5f ? 1.5f : currentSize.x;
+        float newY = currentSize.y < 1.5f ? 1.5f : currentSize.y;
+        col.size = new Vector2(newX, newY);
+
         PartObject poNew = go.AddComponent<PartObject>();
 
         LevelManager.Ins.curLevel.AddToList(poNew);
@@ -94,6 +100,12 @@ public class PartManager : Singleton<PartManager>
             var col = left.AddComponent<BoxCollider2D>();
             col.isTrigger = true;
 
+            // Set box size
+            Vector2 currentSize = col.size;
+            float newX = currentSize.x < 1.5f ? 1.5f : currentSize.x;
+            float newY = currentSize.y < 1.5f ? 1.5f : currentSize.y;
+            col.size = new Vector2(newX, newY);
+
             PartObject poNewL = left.AddComponent<PartObject>();
 
             LevelManager.Ins.curLevel.AddToList(poNewL);
@@ -113,7 +125,11 @@ public class PartManager : Singleton<PartManager>
             var col = right.AddComponent<BoxCollider2D>();
             col.isTrigger = true;
 
-            right.AddComponent<PartObject>();
+            // Set box size
+            Vector2 currentSize = col.size;
+            float newX = currentSize.x < 1.5f ? 1.5f : currentSize.x;
+            float newY = currentSize.y < 1.5f ? 1.5f : currentSize.y;
+            col.size = new Vector2(newX, newY);
 
             PartObject poNewR = right.AddComponent<PartObject>();
 
