@@ -33,7 +33,6 @@ public class PicCanvas : UICanvas
             Texture2D photo = photoCapture.GetCapturedPhoto();
             if (photo != null)
             {
-#if UNITY_ANDROID || UNITY_IOS
                 FileSaveManager.Ins.SaveTexture(photo, "photo.png", "MyAlbum", (success, path) =>
                 {
                     if (success)
@@ -41,15 +40,6 @@ public class PicCanvas : UICanvas
                     else
                         Debug.LogWarning("❌ Failed to save photo!");
                 });
-#elif UNITY_STANDALONE || UNITY_EDITOR
-        FileSaveManager.Ins.SaveTexture(photo, "photo.png", "MyAlbum", (success, path) =>
-        {
-            if (success)
-                Debug.Log("💾 Photo saved to PC: " + path);
-            else
-                Debug.LogWarning("❌ Save cancelled!");
-        });
-#endif
             }
             else
             {
