@@ -1,5 +1,4 @@
-﻿using UnityEditor.Sprites;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PartManager : Singleton<PartManager>
 {

@@ -17,27 +17,22 @@ MonoBehaviour:
       id: 0
       orderInLayer: -1
       name: Body
-      sprite: {fileID: 21300000, guid: f8cb5eec2d706cd45a9d070ecfdcf20b, type: 3}
+      sprite: {fileID: 21300000, guid: 71df0032dacfbe243886fcef2da2dc1a, type: 3}
     face:
       id: 0
       orderInLayer: 0
       name: Face
-      sprite: {fileID: 21300000, guid: debd2117619f3ec479bdecbc824ea12e, type: 3}
+      sprite: {fileID: 21300000, guid: c9494e72f7aa8a24297b0e2633c294ca, type: 3}
     hair:
       id: 0
       orderInLayer: 2
       name: Hair
-      sprite: {fileID: 21300000, guid: 9d9656d5362534cdb88097236d8875d8, type: 3}
+      sprite: {fileID: 21300000, guid: b2a68ac1c4bc1404399dee2fb2071872, type: 3}
     mouth:
       id: 0
       orderInLayer: 3
       name: Mouth
-      sprite: {fileID: 21300000, guid: 61b045ff697f72147823aafbf255ed62, type: 3}
-    nose:
-      id: 0
-      orderInLayer: 1
-      name: Nose
-      sprite: {fileID: 21300000, guid: 4aa72c71613d5fa4c87010668ec21142, type: 3}
+      sprite: {fileID: 21300000, guid: 307e1d2b77afc5c4fa6d7974c37f1fa5, type: 3}
     other:
       id: 0
       orderInLayer: 4
@@ -48,37 +43,10 @@ MonoBehaviour:
       orderInLayer: 1
       left:
         displayName: Left_Eye
-        sprite: {fileID: 21300000, guid: af505102914669f46bbb1dd1e15621fc, type: 3}
+        sprite: {fileID: 21300000, guid: b8e2b3e02ab89324489a6e0865e6698a, type: 3}
       right:
         displayName: Right_Eye
-        sprite: {fileID: 21300000, guid: b753d65da65574042abb57b91b05f176, type: 3}
-    eyeBrows:
-      id: 0
-      orderInLayer: 2
-      left:
-        displayName: Left_Eyebrow
-        sprite: {fileID: 21300000, guid: bf4262ad42a6b7d42992b887ab517969, type: 3}
-      right:
-        displayName: Right_Eyebrow
-        sprite: {fileID: 21300000, guid: 2923fc59d59cfa64eaa488d78f3739a0, type: 3}
-    hands:
-      id: 0
-      orderInLayer: -2
-      left:
-        displayName: Left_Hand
-        sprite: {fileID: 21300000, guid: a0889f26c7b6d4aca9124796b985bf93, type: 3}
-      right:
-        displayName: Right_Hand
-        sprite: {fileID: 21300000, guid: bf9400970ac314033b4e171d3b336fa5, type: 3}
-    legs:
-      id: 0
-      orderInLayer: -2
-      left:
-        displayName: Left_Leg
-        sprite: {fileID: 21300000, guid: 01e3d2a1b66314d1fa129514a40f6e66, type: 3}
-      right:
-        displayName: Right_Leg
-        sprite: {fileID: 21300000, guid: 88eec6c522b5e4bee860a5e0e9659eb3, type: 3}
+        sprite: {fileID: 21300000, guid: 9b703621fe26f60439b115b07adf394b, type: 3}
     otherPair:
       id: 0
       orderInLayer: 4
