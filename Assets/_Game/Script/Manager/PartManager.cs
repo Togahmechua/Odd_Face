@@ -68,16 +68,18 @@ public class PartManager : Singleton<PartManager>
         SpawnSingle(pack.face, trans);
         SpawnSingle(pack.hair, trans);
         SpawnSingle(pack.mouth, trans);
-        SpawnSingle(pack.nose, trans);
+        //SpawnSingle(pack.nose, trans);
 
         SpawnPair(pack.eyes, trans);
-        SpawnPair(pack.eyeBrows, trans);
-        SpawnPair(pack.hands, trans);
-        SpawnPair(pack.legs, trans);
+        //SpawnPair(pack.eyeBrows, trans);
+        //SpawnPair(pack.hands, trans);
+        //SpawnPair(pack.legs, trans);
 
-        int randOther = Random.Range(0, 3); // 0 = none, 1 = single, 2 = pair
+        /*int randOther = Random.Range(0, 3); // 0 = none, 1 = single, 2 = pair
         if (randOther == 1) SpawnSingle(pack.other, trans);
-        else if (randOther == 2) SpawnPair(pack.otherPair, trans);
+        else if (randOther == 2) SpawnPair(pack.otherPair, trans);*/
+
+        SpawnSingle(pack.other, trans);
     }
     #endregion
 

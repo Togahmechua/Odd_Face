@@ -320,6 +320,7 @@ MonoBehaviour:
   handSO: {fileID: 11400000, guid: 04fb9dac58063664da4258ce0f2f72b9, type: 2}
   legSO: {fileID: 11400000, guid: b9c02b01bd09c0b4a8cecd94d9d1bb07, type: 2}
   otherPairSO: {fileID: 11400000, guid: cad5e19efc4233e4db52bee57e8fe997, type: 2}
+  packSO: {fileID: 11400000, guid: 43dca4d0dfe2de84d8dc7869969e55eb, type: 2}
 --- !u!1 &329904506
 GameObject:
   m_ObjectHideFlags: 0
