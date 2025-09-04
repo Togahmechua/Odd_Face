@@ -14,13 +14,12 @@ When all parts are placed, the **full face is revealed**, and you can capture & 
 ---
 
 ## 🖼️ Screenshots
-
 | | | |
 |---|---|---|
 | <img width="320" src="https://github.com/user-attachments/assets/dc9be249-f249-4164-a4fa-f53a650bd1c7" /> | <img width="320" src="https://github.com/user-attachments/assets/9e45e454-bfa6-468f-9251-766980536325" /> | <img width="320" src="https://github.com/user-attachments/assets/99e241f6-aee4-4e39-893b-54f7594ef0f8" /> |
 | <img width="320" src="https://github.com/user-attachments/assets/dd9370d6-d19a-462a-ac34-e9bd50c10efb" /> | <img width="320" src="https://github.com/user-attachments/assets/fdf94ff4-2011-4214-aeec-29f13e8f1684" /> | <img width="320" src="https://github.com/user-attachments/assets/3405f5fb-9b76-4d91-83ab-525e9fb24727" /> |
 | <img width="320" src="https://github.com/user-attachments/assets/72a887e7-a635-46cd-8a84-fd4863e26e7e" /> | <img width="320" src="https://github.com/user-attachments/assets/b1eea341-897d-443b-968a-bb3a51ad2f4d" /> | <img width="320" src="https://github.com/user-attachments/assets/d511f52d-8e80-4e5f-8269-cc35c691b1f8" /> |
-| <img width="320" src="https://github.com/user-attachments/assets/11c0684f-74d9-4994-a4f1-713753efe926" /> | | |
+| <img width="320" src="https://github.com/user-attachments/assets/11c0684f-74d9-4994-a4f1-713753efe926" /> | <img width="320" src="https://github.com/user-attachments/assets/2f5b7b4f-8373-4a03-8f32-36c56f779597" /> | <img width="320" src="https://github.com/user-attachments/assets/a7298e30-b329-48e9-ab8f-5a011c8f0bf7" /> |
 
 ---
 
