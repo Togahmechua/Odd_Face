@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +9,12 @@ public class StartCanvas : UICanvas
 
     private void Start()
     {
+        // Ban đầu disable button
+        startBtn.interactable = false;
+
+        // Theo dõi trạng thái load
+        StartCoroutine(WaitForDataLoad());
+
         startBtn.onClick.AddListener(() =>
         {
             AudioManager.Ins.PlaySFX(AudioManager.Ins.click);
@@ -20,5 +26,17 @@ public class StartCanvas : UICanvas
                     LevelManager.Ins.SpawnLevel();
                 });
         });
+    }
+
+    private IEnumerator WaitForDataLoad()
+    {
+        // Chờ cho đến khi load xong
+        yield return new WaitUntil(() => PartManager.Ins != null && PartManager.Ins.IsLoaded);
+
+        // Khi load xong thì enable button
+        startBtn.interactable = true;
+
+        // Có thể thêm hiệu ứng hoặc text thay đổi
+        Debug.Log("✅ Đã load xong, button sẵn sàng!");
     }
 }

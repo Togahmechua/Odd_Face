@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d74e6160a03dda24f9dbea5bedd9e752
+  m_SerializeEntries:
+  - m_GUID: 43dca4d0dfe2de84d8dc7869969e55eb
+    m_Address: Assets/_Game/Data/Pack/PackSO.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AllPartsSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ce9ab7ac1278c34c84bfa75860878a0
+    m_Address: Assets/_Game/Data/Pair/EyeBrowSO.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AllPartsSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 64ccc4e48184eb14b890f2db77a25f7e
+    m_Address: Assets/_Game/Data/Pair/EyeSO.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AllPartsSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 04fb9dac58063664da4258ce0f2f72b9
+    m_Address: Assets/_Game/Data/Pair/HandSO.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AllPartsSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9c02b01bd09c0b4a8cecd94d9d1bb07
+    m_Address: Assets/_Game/Data/Pair/LegSO.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AllPartsSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cad5e19efc4233e4db52bee57e8fe997
+    m_Address: Assets/_Game/Data/Pair/PairOther.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AllPartsSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3eecd53043ee2904bb9ec4d0233bda79
+    m_Address: Assets/_Game/Data/Single/BodySO.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AllPartsSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 04a7b3d2493d626439983a38a168d119
+    m_Address: Assets/_Game/Data/Single/FaceSO.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AllPartsSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7962a27f1cb52b44a9ad90587109669f
+    m_Address: Assets/_Game/Data/Single/HairSO.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AllPartsSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44e9e9f853c3ce0469232e1dcbea749c
+    m_Address: Assets/_Game/Data/Single/MouthSO.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AllPartsSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1310e657cf4fa64aafae7304471f9d0
+    m_Address: Assets/_Game/Data/Single/NoseSO.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AllPartsSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2014ea531875b6438801f92b6456e39
+    m_Address: Assets/_Game/Data/Single/OtherSO.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AllPartsSO
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a58346a76037b9240a6774cc2abd4fa7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 054260828f163cd49a2cb7f653be359d, type: 2}
+    - {fileID: 11400000, guid: 500661db1bacdd44c9098e2484b80527, type: 2}

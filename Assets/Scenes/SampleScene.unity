@@ -309,18 +309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f59beba838231d4b8293731a0af980d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodySO: {fileID: 11400000, guid: 3eecd53043ee2904bb9ec4d0233bda79, type: 2}
-  faceSO: {fileID: 11400000, guid: 04a7b3d2493d626439983a38a168d119, type: 2}
-  hairSO: {fileID: 11400000, guid: 7962a27f1cb52b44a9ad90587109669f, type: 2}
-  mouthSO: {fileID: 11400000, guid: 44e9e9f853c3ce0469232e1dcbea749c, type: 2}
-  noseSO: {fileID: 11400000, guid: a1310e657cf4fa64aafae7304471f9d0, type: 2}
-  otherSO: {fileID: 11400000, guid: a2014ea531875b6438801f92b6456e39, type: 2}
-  eyeSO: {fileID: 11400000, guid: 64ccc4e48184eb14b890f2db77a25f7e, type: 2}
-  eyeBrowSO: {fileID: 11400000, guid: 6ce9ab7ac1278c34c84bfa75860878a0, type: 2}
-  handSO: {fileID: 11400000, guid: 04fb9dac58063664da4258ce0f2f72b9, type: 2}
-  legSO: {fileID: 11400000, guid: b9c02b01bd09c0b4a8cecd94d9d1bb07, type: 2}
-  otherPairSO: {fileID: 11400000, guid: cad5e19efc4233e4db52bee57e8fe997, type: 2}
-  packSO: {fileID: 11400000, guid: 43dca4d0dfe2de84d8dc7869969e55eb, type: 2}
 --- !u!1 &329904506
 GameObject:
   m_ObjectHideFlags: 0
