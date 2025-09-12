@@ -53,27 +53,56 @@ public class PartManager : Singleton<PartManager>
 
     private async void Start()
     {
+        Debug.Log($"🎮 Current Platform: {Application.platform}");
+        Debug.Log($"📁 Remote Path: {GetPlatformRemotePath()}");
+
         await LoadAllSOFromRemoteAsync();
     }
 
     #region LOAD REMOTE ASSETS
+    private string GetPlatformRemotePath()
+    {
+        switch (Application.platform)
+        {
+            case RuntimePlatform.WindowsPlayer:
+            case RuntimePlatform.WindowsEditor:
+                return "https://togadata.netlify.app/StandaloneWindows64/";
+
+            case RuntimePlatform.Android:
+                return "https://togadata.netlify.app/Android/";
+
+            case RuntimePlatform.WebGLPlayer:
+                return "https://togadata.netlify.app/WebGL/";
+
+            case RuntimePlatform.IPhonePlayer:
+                return "https://togadata.netlify.app/iOS/";
+
+            default:
+                Debug.LogWarning($"⚠ Platform {Application.platform} chưa được hỗ trợ, dùng Windows làm mặc định");
+                return "https://togadata.netlify.app/StandaloneWindows64/";
+        }
+    }
+
     private async Task LoadAllSOFromRemoteAsync()
     {
         Debug.Log("🔄 Bắt đầu load catalog remote...");
 
-        // 🚨 XÓA CACHE TRIỆT ĐỂ TRƯỚC KHI LOAD
-        if (Caching.ClearCache())
-        {
-            Debug.Log("✅ Đã xóa cache cũ");
-        }
+        #if !UNITY_WEBGL
+            if (Caching.ClearCache())
+            {
+                Debug.Log("✅ Đã xóa cache cũ");
+            }
+        #endif
 
         Addressables.ClearResourceLocators();
 
-        // URL catalog remote trên server Netlify MỚI
+        // 🎯 TỰ ĐỘNG LẤY URL THEO PLATFORM
+        string platformPath = GetPlatformRemotePath();
         string timestamp = DateTime.Now.Ticks.ToString();
-        string remoteCatalogUrl = $"https://togadata.netlify.app/StandaloneWindows64/catalog_1.0.json?t={timestamp}";
+        string remoteCatalogUrl = $"{platformPath}catalog_1.0.json?t={timestamp}";
 
-        Debug.Log($"📦 Loading catalog từ: {remoteCatalogUrl}");
+        Debug.Log($"📦 Platform: {Application.platform}");
+        Debug.Log($"🌐 Loading catalog từ: {remoteCatalogUrl}");
 
         try
         {
@@ -84,11 +113,6 @@ public class PartManager : Singleton<PartManager>
             if (catalogHandle.Status == AsyncOperationStatus.Succeeded)
             {
                 Debug.Log("✅ Catalog remote loaded thành công");
-
-                // 🎯 DEBUG: Kiểm tra URLs thực tế
-                DebugLocations();
-
-                // Load assets từ label "AllPartsSO" từ remote
                 await LoadAssetsFromRemote();
             }
             else
@@ -99,6 +123,11 @@ public class PartManager : Singleton<PartManager>
         catch (Exception ex)
         {
             Debug.LogError($"❌ Lỗi load catalog: {ex.Message}");
+
+            // Fallback: thử load lại sau 2 giây
+            Debug.Log("🔄 Thử load lại sau 2 giây...");
+            await Task.Delay(2000);
+            await LoadAllSOFromRemoteAsync();
         }
     }
 
