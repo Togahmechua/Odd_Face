@@ -1,13 +1,21 @@
 # 🎭 Odd Face
 
-A fun and creative **memory & face-assembly puzzle game**.  
-Players drag and drop face parts one by one. Each part disappears after placement.  
+A fun and creative **memory & face-assembly puzzle game** now powered by **cloud technology**!  
+Players drag and drop face parts loaded dynamically from remote server. Each part disappears after placement.  
 When all parts are placed, the **full face is revealed**, and you can capture & save your masterpiece!  
 
 ---
 
+## ⚡ **NEW: Remote Loading Technology**
+- **🌐 Cloud-Powered Content**: Game now dynamically loads assets from remote server instead of bundling everything locally
+- **📦 Smaller Build Size**: Reduced initial download size thanks to cloud integration
+- **🔄 Live Updates**: New content can be added without requiring app store updates
+- **📱 Multi-Platform Support**: Same cloud system works seamlessly on both Android and PC versions
+
+---
+
 ## 📱 App Icon
-<p align="center">
+<p align="left">
   <img width="200" height="200" alt="app icon" src="https://github.com/user-attachments/assets/5253c13c-ad96-47d1-abe1-19b85ed7ea45" />
 </p>
 
@@ -30,25 +38,26 @@ When all parts are placed, the **full face is revealed**, and you can capture & 
 - 💡 **Minimal & Fun** – designed for short, joyful play sessions  
 - 📂 **Save & Share** – automatically saves to gallery, making it easy to share with friends  
 - 🎭 **Replayability** – every attempt creates a new funny face combination  
+- 🌐 **Remote Loading** – assets loaded dynamically from cloud server
 
 ---
 
 ## 🎮 How to Play
-1. **Start** the game and wait for the first face part to appear.  
-2. **Drag & Drop** the part into the correct position.  
+1. **Start** the game and wait for assets to load from server
+2. **Drag & Drop** the part into the correct position  
 3. The part will **disappear after placement** – challenging your memory!  
-4. Repeat until **all parts are placed**.  
-5. The **full face is revealed** 🎉.  
-6. Use the **screenshot button** to save your creation to the gallery.  
+4. Repeat until **all parts are placed**  
+5. The **full face is revealed** 🎉  
+6. Use the **screenshot button** to save your creation to the gallery  
 
 ---
 
 ## 📂 Save & Share
 The game comes with a built-in **screenshot capture system**:
-- When the player completes a face, they can **take a snapshot** of their creation.  
-- The screenshot is saved directly to the **device’s gallery/storage**.  
-- Players can **share their results** on social media or messaging apps with ease.  
-- Works on both **real devices** and **emulators** (for testing).  
+- When the player completes a face, they can **take a snapshot** of their creation  
+- The screenshot is saved directly to the **device's gallery/storage**  
+- Players can **share their results** on social media or messaging apps with ease  
+- Works on both **real devices** and **emulators** (for testing)  
 
 ---
 
@@ -56,7 +65,10 @@ The game comes with a built-in **screenshot capture system**:
 - **Unity 2022.3.24 LTS** – stable and lightweight for 2D casual games  
 - **C#** – handles game logic, drag & drop interactions, and face assembly  
 - **Custom Screenshot Capture** – allows saving and sharing player creations  
-- **Mobile & Emulator Friendly** – tested on both devices and emulators  
+- **Mobile & Emulator Friendly** – tested on both devices and emulators
+- **Unity Addressables** – advanced asset management system for remote loading
+- **Netlify CDN** – high-performance cloud hosting for game assets
+- **Cross-Platform Architecture** – single codebase supporting Android, PC, and WebGL
 
 ---
 
@@ -65,9 +77,14 @@ The game comes with a built-in **screenshot capture system**:
 - **SOLID Principles** – code is structured into small, maintainable classes that follow single-responsibility and interface segregation  
 - **Interfaces** – ensure flexibility and scalability when adding new part types or gameplay mechanics  
 - **Object Pooling** – optimizes performance by reusing face part objects instead of creating/destroying repeatedly  
-- **Event-driven Design** – UI updates and gameplay logic are loosely coupled, improving testability and maintainability  
+- **Event-driven Design** – UI updates and gameplay logic are loosely coupled, improving testability and maintainability
+- **Remote Asset Loading** – implements Unity Addressables for dynamic content delivery
+- **Platform Detection** – automatic server path resolution for different platforms
+- **Cache Management** – efficient asset caching with proper validation
 
 ---
 
 ## 🌐 Play Now
 👉 Try it here: [Odd Face on itch.io](https://togahmechua.itch.io/odd-face)  
+
+**Now with cloud-powered content delivery!** 🚀
